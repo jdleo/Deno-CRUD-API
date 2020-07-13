@@ -4,6 +4,7 @@ import 'https://deno.land/x/dotenv/load.ts';
 
 // database controllers
 import { getAllNotes } from './controllers/getAllNotes.ts';
+import { addNote } from './controllers/addNote.ts';
 
 // set up router
 const router = new Router();
@@ -18,7 +19,9 @@ router
     };
   })
   // get all notes
-  .get('/notes', getAllNotes);
+  .get('/notes', getAllNotes)
+  // create, read, update, delete (CRUD)
+  .post('/note', addNote);
 
 // init app
 const app = new Application();
