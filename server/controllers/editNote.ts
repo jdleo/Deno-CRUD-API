@@ -13,7 +13,10 @@ export const editNote = async (ctx: any) => {
     const body: any = await ctx.request.body();
 
     // attempt to edit note with given id and fields to update
-    const note = await Note.updateOne({ _id: ObjectId('5f0ca7ca00b8a17800265ffe') }, body);
+    const note = await Note.updateOne(
+      { _id: ObjectId('5f0ca7ca00b8a17800265ffe') },
+      { $set: body }
+    );
 
     // send notes back in response
     ctx.response.body = note;
