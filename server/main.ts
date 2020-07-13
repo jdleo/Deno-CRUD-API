@@ -7,6 +7,7 @@ import { getAllNotes } from './controllers/getAllNotes.ts';
 import { addNote } from './controllers/addNote.ts';
 import { getNote } from './controllers/getNote.ts';
 import { editNote } from './controllers/editNote.ts';
+import { deleteNote } from './controllers/deleteNote.ts';
 
 // set up router
 const router = new Router();
@@ -25,7 +26,8 @@ router
   // create, read, update, delete (CRUD)
   .post('/note', addNote)
   .get('/note/:id', getNote)
-  .patch('/note/:id', editNote);
+  .patch('/note/:id', editNote)
+  .delete('/note/:id', deleteNote);
 
 // init app
 const app = new Application();
