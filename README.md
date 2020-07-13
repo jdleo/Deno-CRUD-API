@@ -11,3 +11,11 @@ This is an example CRUD app, fully using Deno. There are notes, where the interf
 ```
 deno run --allow-read --allow-env --allow-net --allow-plugin --unstable --allow-write server/main.ts
 ```
+
+3. View any API routes in browser:
+
+```
+localhost:5757/
+localhost:5757/notes
+localhost:5757/notes/:id
+```
