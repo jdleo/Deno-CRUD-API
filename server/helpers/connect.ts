@@ -1,4 +1,4 @@
-import { MongoClient } from 'https://deno.land/x/mongo@v0.8.0/mod.ts';
+import { MongoClient, ObjectId } from 'https://deno.land/x/mongo@v0.8.0/mod.ts';
 
 // create client
 const client = new MongoClient();
@@ -16,4 +16,4 @@ const db = client.database(dbname);
 const Note = db.collection('notes');
 
 // expose everything to rest of codebase
-export { db, Note };
+export { db, Note, ObjectId };
