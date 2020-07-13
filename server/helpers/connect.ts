@@ -13,7 +13,7 @@ const dbname: string = 'main';
 const db = client.database(dbname);
 
 // collections declarations
-const Note = db.collection('users');
+const Note = db.collection('notes');
 
 // expose everything to rest of codebase
 export { db, Note };
