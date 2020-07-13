@@ -8,7 +8,7 @@ export const getAllNotes = async (ctx: any) => {
   try {
     // get all notes (sorted by timestamp descending)
     const notes: NoteSchema[] = await Note.find({
-      $query: { $_id: { $ne: null }, $orderBy: { $timestamp: -1 } },
+      $_id: { $ne: null },
     });
 
     // send notes back in response
