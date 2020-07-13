@@ -10,7 +10,7 @@ export const getNote = async (ctx: any) => {
     const id: string = ctx.params.id;
 
     // attempt to get note with given id
-    const note: NoteSchema = await Note.findOne({ _id: ObjectId('5f0ca7ca00b8a17800265ffe') });
+    const note: NoteSchema = await Note.findOne({ _id: ObjectId(id) });
 
     // send notes back in response
     ctx.response.body = note;
