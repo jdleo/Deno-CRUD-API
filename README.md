@@ -4,7 +4,8 @@ This is an example CRUD app, fully using Deno. There are notes, where the interf
 
 ## How to Run
 
-1. First, set a `MONGO_URI` environment variable, and put it in `.env` at the root level of this project.
+1. First, set a `MONGO_URI` environment variable, set it equal to your MongoDB connection string and put it in `.env` at the root level of this project.
+
 2. Next, run the following deno command in root of your project:
 
 ```
